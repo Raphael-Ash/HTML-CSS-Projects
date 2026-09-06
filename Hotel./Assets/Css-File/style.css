@@ -1,51 +1,381 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    font-family: sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: sans-serif;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-.header{
-    width: 100%;
-    height: 45px;
-    position: fixed;
-    top: 0;
-    left: 0;
+h2 {
+  font-size: 26px;
+  font-weight: 400;
 }
 
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
+body {
+  background-color: #f1f1f1;
 }
 
-.navbar a{
-    padding: 10px 20px;
-    border: 1px solid red;
-    color: #000;
+/* Header And Navbar Css Code Start */
+.header {
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
-.left{
-    display: flex;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  background-color: #fff;
 }
 
-#logo{
-    background-color: #f44336 ;
+.navbar a {
+  padding: 10px 20px;
+  color: #000;
+  transition: all 0.5s;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.navbar a:hover,
+.hotel-form-container button:hover,
+.room-input-container button:hover,
+.room-info-box button:hover,
+.contact-form input[type="submit"]:hover {
+  background-color: rgb(193, 178, 178);
+  color: #000;
+}
+
+.left {
+  display: flex;
+}
+
+#logo {
+  background-color: #f44336;
+  color: #fff;
+  padding: 10px 23px;
+}
+
+#logo i {
+  margin-right: 10px;
+}
+
+.right-side a {
+  display: inline-block;
+  align-content: center;
+  padding: 10px 25px;
+  background-color: #f1f1f1;
+}
+/* Header And Navbar Css Code End */
+
+/* Hotel-Section Css Code Start */
+.hotel-section {
+  background-image: url(../Image/hotel.jpg);
+  background-size: cover;
+  height: 80vh;
+  position: relative;
+}
+
+.hotel-form-container {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 48%;
+  height: 300px;
+}
+
+.hotel-name {
+  background-color: #f44336;
+  color: #fff;
+  height: 70px;
+  align-content: center;
+  padding-left: 10px;
+  font-size: 19px;
+}
+
+.hotel-name h2 {
+  padding-left: 10px;
+  font-weight: 400;
+}
+
+.hotel-name h2 span {
+  padding-right: 10px;
+}
+
+.input-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 20px;
+  padding: 10px 0px 0px 10px;
+}
+
+.input-container input,
+.room-input-container input {
+  width: 97%;
+  height: 38px;
+  font-size: 12px;
+  padding: 0px 10px;
+}
+
+.input-container input[type="text"] {
+  margin-bottom: 20px;
+}
+
+.hotel-form-container button {
+  margin: 25px 0px 0px 10px;
+  height: 39px;
+  width: 27%;
+  border: none;
+  background-color: #616161;
+  color: #fff;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.hotel-form-container button span {
+  padding-right: 20px;
+}
+/* Hotel-Section Css Code Start */
+
+/* Room Section Css Code Staer */
+.rooms-section {
+  margin-top: 20px;
+}
+
+.rooms-section p {
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+.room-input-container form {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.room-input-container div {
+  width: 20%;
+}
+
+.room-input-container input {
+  width: 100%;
+}
+
+.room-input-container button {
+  width: 100%;
+  height: 38px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.choose-room-container {
+  display: flex;
+  margin-top: 15px;
+  gap: 20px;
+}
+
+.room-info{
+  transition: all 0.5s;
+  background-color: #fff;
+
+}
+
+.room-info:hover{
+    box-shadow: 0px 5px 20px #aaa;
+}
+
+.choose-room-container img {
+  width: 100%;
+  filter: grayscale(1);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.choose-room-container img:hover {
+  filter: grayscale(0);
+}
+
+.room-info-box {
+  padding: 10px 15px;
+}
+
+.room-info-box button {
+  width: 100%;
+  height: 47px;
+  margin-top: 20px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+/* Room Section Css Code Staer */
+
+/* About Section Css Code Start */
+.about-section {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+.about-container p {
+  margin-top: 10px;
+}
+/* About Section Css Code End */
+
+/* contact info Css Code Start */
+.contact-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+  color: #f44336;
+  font-size: 18px;
+  margin-top: 30px;
+}
+/* contact info Css Code End */
+
+/* on demand Section Css Code Start */
+.on-demand-section {
+  background-color: #f44336;
+  height: 90px;
+  align-content: center;
+  margin-top: 20px;
+  color: #fff;
+  border-left: 7px solid #968989;
+  border-radius: 20px;
+  padding-left: 15px;
+}
+/* on demand Section Css Code Start */
+
+/* our hotel Section Css Code Start */
+.our-hotel-section {
+  margin-top: 20px;
+}
+
+.our-hotel-section p {
+  margin-top: 10px;
+}
+
+.our-hotel-image-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 60vh;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.cinque-box {
+  background-image: url(../Image/cinqueterre.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.cinque-box span {
+  position: absolute;
+  top: 95%;
+  left: 12%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: bolder;
+  font-size: 20px;
+  padding: 10px;
+  background-color: #f44336;
+  font-style: italic;
+  border-radius: 20px;
+}
+
+.image-box2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.image-box2 div {
+  background-size: cover;
+  position: relative;
+}
+
+.image-box2 div span {
+  position: absolute;
+  top: 94%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  background-color: #f44336;
+  color: #fff;
+  width: 130px;
+  text-align: center;
+  font-style: italic;
+  font-weight: bolder;
+  border-radius: 20px;
+}
+/* our hotel Section Css Code End */
+
+/* contact Section Css Code Start */
+.contact-section {
+  margin-top: 20px;
+}
+
+.contact-section p {
+  margin-top: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.contact-form input {
+  height: 50px;
+  padding-left: 10px;
+}
+
+.icon {
+  color: #f44336;
+}
+
+.contact-form input[type="submit"] {
+  width: 200px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+/* contact Section Css Code End */
+main {
+  padding-top: 46px;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.footer {
+  height: 200px;
+  background-color: #000;
+  margin-top: 20px;
+  border-radius: 50px 40px 0px 0px;
+  color: #fff;
+  text-align: center;
+  align-content: center;
+}
+
+.footer a{
     color: #fff;
-}
-
-.right-side a{
-    display: inline-block;
-    align-content: center;
-    padding: 10px 25px;
-    background-color: #f1f1f1;
-}
-
-main{
-    padding-top: 50px;
 }
