@@ -12,10 +12,10 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  padding-top: 150px;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -23,7 +23,9 @@ a{
   width: 100%;
   height: 150px;
   border-bottom: 1px solid red;
-  position: relative;
+  position: fixed;
+  z-index: 3;
+  background-color: white;
 }
 
 .header-top {
@@ -80,7 +82,7 @@ select {
 
 .search-container {
   display: flex;
-  gap: 20px;
+  gap: 10px;
 }
 
 .search-container div {
@@ -97,15 +99,16 @@ select {
 
 .search-container span {
   text-align: center;
-  display: flex;
+  padding: 10px 16px;
+  display: inline-block;
+  font-size: 20px;
+  transition: all 0.5s;
 }
 
-.search-container span img {
-  width: 25px;
-}
-
-.search-container > span:last-child img {
-  width: 30px;
+.search-container span:hover {
+  background-color: #db4444;
+  color: #fff;
+  border-radius: 50%;
 }
 
 .hero {
@@ -123,15 +126,17 @@ select {
   width: 250px;
 }
 
-.sideBar a{
+.sideBar a {
   padding: 7px;
   color: #000;
   transition: all 0.5s;
 }
 
-.sideBar a:hover{
-  background-color: rgb(201, 192, 192);
+.sideBar a:hover {
+  background-color: #db4444;
+  color: #fff;
   transform: scaleX(1.1);
+  border-radius: 10px;
 }
 
 .iphone-container {
@@ -143,9 +148,10 @@ select {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
-.iphone-info-box{
+.iphone-info-box {
   position: absolute;
   left: 33px;
   height: 240px;
@@ -153,9 +159,10 @@ select {
   flex-direction: column;
   justify-content: space-between;
   gap: 10px;
+  z-index: 1;
 }
 
-.iphone-info-box img{
+.iphone-info-box img {
   width: 50px;
   height: 30px;
 }
@@ -168,55 +175,61 @@ select {
 }
 
 .iphone-info-box > span:first-child i {
-  font-size: 40px;  
+  font-size: 40px;
   padding-right: 20px;
   width: auto;
 }
 
-.iphone-info-box p{
+.iphone-info-box p {
   font-size: 50px;
 }
 
-.iphone-info-box a{
+.iphone-info-box a {
   border-bottom: 2px solid white;
   padding: 5px 0px;
   color: #fff;
 }
 
-.iphone-image{
+.iphone-image {
   position: absolute;
   right: 0px;
 }
 
-.today,.categories,.this-month,.jbl,.our-products,.featured,.icon{
-  margin: 50px;
+.today,
+.categories,
+.this-month,
+.jbl,
+.our-products,
+.featured,
+.icon {
+  margin: 50px 0px;
   width: 100%;
 }
 
-.title-container{
+.title-container {
   display: flex;
   justify-content: space-between;
 }
 
-.line{
+.line {
   display: flex;
   gap: 10px;
   align-items: center;
 }
 
-.line div{
+.line div {
   width: 15px;
   border-radius: 5px;
   height: 40px;
   background-color: #db4444;
 }
 
-.title-container h2{
+.title-container h2 {
   font-size: 30px;
   margin-top: 10px;
 }
 
-.section-title-name{
+.section-title-name {
   align-content: end;
   display: flex;
   justify-content: center;
@@ -224,44 +237,38 @@ select {
   gap: 10px;
 }
 
-.section-title-name span{
+.section-title-name span {
   background-color: #f5f5f5;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
   text-align: center;
-  align-content: end;
+  align-content: center;
+  transition: all 0.5s;
+  padding: 10px 12px;
 }
-
-.section-title-name span img{
-  height: 19px;
-}
-
-.device-container{
+.device-container {
   margin-top: 50px;
   display: flex;
   gap: 25px;
 }
 
-.device-container div{
+.device-container div {
   border: 1px solid #000;
-  width: 33%;
+  width: 300px;
   height: 190px;
   text-align: center;
   align-content: center;
+  transition: all 0.5s;
 }
 
-#camera{
+.device-container div:hover {
+  border-radius: 50% 10% 50% 10%;
+  box-shadow: 10px 10px 20px red;
+}
+
+#camera {
   background-color: #db4444;
   color: #fff;
 }
-
-
-
-
-
-
-
 
 .card-container {
   display: flex;
@@ -311,6 +318,13 @@ select {
   align-items: center;
   background-color: white;
   border-radius: 50%;
+  transition: all 0.5s;
+}
+
+.card-icon span:hover,
+.section-title-name span:hover {
+  background-color: #db4444;
+  color: #fff;
 }
 
 .item-image > span:last-child {
@@ -380,69 +394,661 @@ select {
   color: #777;
 }
 
+.this-month .offer-box,
+.our-products .offer-box {
+  visibility: hidden;
+}
+
+.view-all {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.view-all button {
+  border: none;
+  width: 200px;
+  height: 50px;
+  color: #fff;
+  background-color: #db4444;
+  transition: all 0.5s;
+}
+
+.view-all button:hover {
+  border-radius: 10px;
+  box-shadow: 5px 5px 3px #db4444;
+}
+
+.feed-back {
+  padding-bottom: 15px;
+}
+
+.pick-color {
+  display: flex;
+  gap: 10px;
+}
+
+.pick-color div {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+#green {
+  background-color: greenyellow;
+}
+
+#black {
+  background-color: #000;
+}
+
+.jbl {
+  width: 100%;
+  min-height: 500px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  align-items: center;
+
+  padding: 40px;
+
+  color: #fff;
+  background-color: #000;
+}
+
+.ff {
+  width: 100%;
+  min-width: 0;
+  height: 400px;
 
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
+.ff h1 {
+  font-size: 55px;
+  font-weight: 500;
+}
 
+.ff h3 {
+  color: greenyellow;
+}
 
+.jbl-info {
+  display: flex;
+  gap: 30px;
+}
 
+.jbl-info span {
+  width: 60px;
+  height: 60px;
 
+  background-color: #fff;
+  color: #000;
 
+  display: inline-block;
 
+  border-radius: 50%;
 
- .this-month .offer-box{
-visibility: hidden;
- }
+  font-size: 10px;
+  text-align: center;
+  align-content: center;
+}
 
+.jbl-info strong {
+  font-size: 13px;
+}
 
+.jbl button {
+  background-color: rgba(0, 255, 102, 1);
+  color: #000;
 
+  font-weight: bolder;
 
+  width: 180px;
+  height: 50px;
 
+  transition: all 0.9s;
+}
 
+.jbl button:hover {
+  background-color: #db4444;
+  color: #fff;
+  border-radius: 50px;
+}
 
+.df {
+  width: 100%;
+  min-width: 0;
+}
 
+.df img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
 
+.new-arrival-container {
+  width: 100%;
 
-footer,
+  display: grid;
 
-.jbl,
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 270px;
+
+  grid-template-areas:
+    "ps5 woman woman"
+    "ps5 speaker perfume";
+
+  gap: 30px;
+}
+
+.ps5-box {
+  grid-area: ps5;
+
+  background-color: #000;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.ps5-box img {
+  position: absolute;
+
+  bottom: 0;
+  left: 20px;
+
+  max-width: 100%;
+}
+
+.ps5-box .sp {
+  position: absolute;
+
+  bottom: 30px;
+  left: 20px;
+
+  z-index: 1;
+}
+
+.woman {
+  grid-area: woman;
+
+  background-color: rgba(13, 13, 13, 1);
+
+  display: flex;
+  justify-content: space-between;
+
+  color: #fff;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.woman img {
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.woman .sp {
+  position: absolute;
+
+  bottom: 20px;
+  left: 20px;
+
+  z-index: 1;
+}
+
+.sp {
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 140px;
+}
+
+.sp h3 {
+  font-size: 26px;
+}
+
+.sp a {
+  display: inline-block;
+
+  width: max-content;
+
+  color: #fff;
+
+  border-bottom: 1px solid #fff;
+
+  padding-bottom: 2px;
+
+  transition: all 0.5s;
+}
+
+.sp a:hover {
+  color: rgb(32, 88, 194);
+  border-color: rgb(32, 88, 194);
+}
+
+.speaker {
+  grid-area: speaker;
+
+  background-color: rgb(61, 59, 59);
+
+  position: relative;
+  overflow: hidden;
+}
+
+.speaker img {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  max-width: 100%;
+}
+
+.perfume {
+  grid-area: perfume;
+
+  background-color: rgb(61, 59, 59);
+
+  position: relative;
+  overflow: hidden;
+}
+
+.perfume img {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  max-width: 100%;
+}
+
+.speaker .sp,
+.perfume .sp {
+  height: 100px;
+
+  position: absolute;
+
+  bottom: 20px;
+  left: 20px;
+
+  z-index: 1;
+}
+
 .icon {
-  width: 90%;
-  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  color: #000;
+}
+
+.icon div div {
+  background-color: #000;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 10px solid rgb(140, 138, 143);
+  padding: 25px;
+  color: #fff;
+  font-size: 30px;
+}
+
+.icon div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  display: none;
 }
 
+footer {
+  width: 100%;
+  background-color: #000;
+  height: 380px;
+  display: grid;
+  color: #fff;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding: 60px 80px;
+}
 
+.footer a {
+  color: #fff;
+}
 
+.footer h3 {
+  font-size: 24px;
+}
 
+.s {
+  display: flex;
+  flex-direction: column;
+}
 
+.exclusive-footer,
+.support-footer,
+.account-footer div,
+.quick-link-footer div,
+.dawnload-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.jbl-info {
+  display: flex;
+}
 
 @media (max-width: 1370px) {
-  main,.navBar {
+  main {
+    width: 100%;
     max-width: 1200px;
+  }
+
+  .navBar {
+    width: 98%;
+  }
+
+  .pages-container {
+    gap: 40px;
+  }
+
+  .today,
+  .categories,
+  .this-month,
+  .jbl,
+  .our-products,
+  .featured,
+  .icon {
+    width: 90%;
+    margin: 50px auto;
+  }
+
+  .new-arrival-container {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: auto;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .header {
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  main{
+    padding-top: 170px;
+  }
+
+  .navBar {
+    position: static;
+    transform: none;
+    width: 95%;
+    margin: 20px auto 0;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .hero {
+    flex-direction: column;
+    width: 95%;
+    margin: auto;
+  }
+
+  .sideBar {
+    display: none;
+  }
+
+
+  .iphone-container {
+    min-height: 400px;
+    width: 100%;
+  }
+
+  .iphone-info-box p {
+    font-size: 35px;
+  }
+
+  .today,
+  .categories,
+  .this-month,
+  .our-products,
+  .featured,
+  .icon {
+    width: 90%;
+    margin: 40px auto;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .item-box {
+    width: 100%;
+  }
+
+  .device-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .device-container div {
+    width: 100%;
+  }
+
+  .new-arrival-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "ps5 ps5"
+      "woman woman"
+      "speaker perfume";
+
+    grid-template-rows: 450px 350px 300px;
+  }
+
+  .jbl{
+    display: none;
+  }
+
+  .ps5-box {
+    min-height: 450px;
+  }
+
+  .footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+  }
+
+  .icon{
+    display: none;
+    
+  }
+
+    .icon div{
+      width: 100%;
+    }
+}
+@media (max-width: 800px) {
+  .header-top {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-top {
+    height: auto;
+    min-height: 45px;
+    padding: 8px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .header-top > div:first-child {
+    display: none;
+  }
+
+  .navBar {
+    flex-direction: column;
+    align-items: stretch;
+    border: none;
+  }
+
+  .navBar h1 {
+    text-align: center;
+  }
+
+  .pages-container {
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .search-container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    width: 95%;
+  }
+
+  .sideBar {
+    display: none;
+
+  }
+
+  .sideBar a {
+    width: 100%;
+  }
+
+  .iphone-container {
+    display: none;
+  }
+
+  .title-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .section-title-name {
+    justify-content: flex-start;
+  }
+
+  .title-container h2 {
+    font-size: 24px;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .item-box {
+    width: 100%;
+  }
+
+  .item-image {
+    height: 280px;
+  }
+
+  .device-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .device-container div {
+    height: 150px;
+  }
+
+  .jbl {
+    width: 100%;
+    min-height: 600px;
+    padding: 30px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .jbl .ff {
+    width: 100%;
+    height: auto;
+    gap: 25px;
+    overflow: hidden;
+  }
+
+  .jbl .ff h1 {
+    font-size: 32px;
+  }
+
+  .jbl-info {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .jbl .df {
+    width: 100%;
+  }
+
+  .jbl .df img {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .new-arrival-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "ps5"
+      "woman"
+      "speaker"
+      "perfume";
+
+    gap: 20px;
+  }
+
+  .ps5-box {
+    min-height: 400px;
+  }
+
+  .woman,
+  .speaker,
+  .perfume {
+    min-height: 300px;
+  }
+
+  .woman img {
+    max-width: 60%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .footer{
+    display: grid;
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 20px;
+    text-align: center;
   }
 }
