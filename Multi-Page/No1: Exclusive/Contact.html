@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="Contact.html">
-</head>
-<body>
-
-     <!-- Header Section HTML Code Start -->
+    <link rel="stylesheet" href="Assets/Css-File/Contact.css" />
+    <link rel="stylesheet" href="Assets/fontawesome-free-7.2.0-web/css/all.min.css">
+  </head>
+  <body>
+    <!-- Header Section HTML Code Start -->
     <header class="header">
       <div class="header-top">
         <div></div>
@@ -29,8 +29,8 @@
           <h1>Exclusive</h1>
         </div>
         <div class="pages-container">
-          <a href="#">Home</a>
-          <a href="#">Contact</a>
+          <a href="index.html">Home</a>
+          <a href="Contact.html">Contact</a>
           <a href="About.html">About</a>
           <a href="sign-up.html">Sign up</a>
         </div>
@@ -55,15 +55,59 @@
     </header>
     <!-- Header Section HTML Code End -->
 
+    <main>
+      <section class="page">
+        <p>
+          <a href="index.html">Home</a> / <a href="Contact.html">Contact</a>
+        </p>
+      </section>
 
+      <section class="contact-container">
+        <div class="call-info-container">
+          <div class="call-box">
+            <div>
+              <span><i class="fa-solid fa-phone"></i></span
+              ><span>Call To Us</span>
+              <p>We are available 24/7, 7 days a week.</p>
+              <p>Phone: +8801611112222</p>
+            </div>
+          </div>
 
+          <hr />
 
+          <div class="write-box">
+            <div>
+              <span><i class="fa-solid fa-envelope"></i></span
+              ><span>Write To US</span>
+            </div>
+            <p>
+              Fill out our form and we will contact <br />
+              you within 24 hours.
+            </p>
+            <p>Emails: customer@exclusive.com</p>
+            <p>Emails: support@exclusive.com</p>
+          </div>
+        </div>
 
+        <div class="form-container">
+            <form action="#">
+                <div>
+                    <input type="text" placeholder="Your Name *">
+                    <input type="text" placeholder="Your Email *">
+                    <input type="text" placeholder="Your Phone *">
+                </div>
+                <div>
+                    <textarea  class="textarea" placeholder="Your Massage"></textarea>
+                </div>
+                <div>
+                    <button type="submit">Send Massage</button>
+                </div>
+            </form>
+        </div>
+      </section>
+    </main>
 
-
-
-
-        <!-- Footer Section HTML Code Start -->
+    <!-- Footer Section HTML Code Start -->
     <footer class="footer">
       <div class="exclusive-footer">
         <h3>Exclusive</h3>
@@ -89,7 +133,10 @@
         <br />
         <div>
           <a href="Account.html">My Account</a>
-          <span><a href="login.html">Login</a> / <a href="sign-up.html">Register</a></span>
+          <span
+            ><a href="login.html">Login</a> /
+            <a href="sign-up.html">Register</a></span
+          >
           <a href="cart.html">Cart</a>
           <a href="wishlist.html">Wishlist</a>
           <a href="#">Shop</a>
@@ -104,7 +151,7 @@
           <a href="#">Terms Of Use</a>
           <a href="#">Cart</a>
           <a href="#">FAQ</a>
-          <a href="#">Contact</a>
+          <a href="Contact.html">Contact</a>
         </div>
       </div>
 
@@ -117,5 +164,5 @@
       </div>
     </footer>
     <!-- Footer Section HTML Code End -->
-</body>
+  </body>
 </html>

@@ -68,10 +68,6 @@ main {
   font-weight: bolder;
 }
 
-.pages-container > a:first-child {
-  border-bottom: 3px solid black;
-}
-
 .search-container {
   display: flex;
   gap: 10px;

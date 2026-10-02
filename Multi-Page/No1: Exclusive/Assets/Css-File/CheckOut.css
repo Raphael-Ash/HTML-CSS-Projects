@@ -215,3 +215,251 @@ h1 {
   gap: 10px;
   text-align: center;
 }
+
+/* =========================
+   1370px
+========================= */
+
+@media (max-width: 1370px) {
+
+  main {
+    width: 90%;
+  }
+
+  .navBar {
+    width: 95%;
+  }
+
+  .pages-container {
+    gap: 40px;
+  }
+
+  .billing-details-section {
+    width: 100%;
+  }
+
+  .bling-info-container {
+    gap: 40px;
+  }
+
+  .form-container {
+    width: 50%;
+  }
+
+  .item-container {
+    width: 45%;
+  }
+
+  .footer {
+    padding: 60px 50px;
+  }
+}
+
+
+/* =========================
+   1100px
+========================= */
+
+@media (max-width: 1100px) {
+
+  .pages-container {
+    gap: 25px;
+  }
+
+  .search-container div input {
+    width: 150px;
+  }
+
+  .bling-info-container {
+    gap: 30px;
+  }
+
+  .form-container {
+    width: 50%;
+  }
+
+  .item-container {
+    width: 45%;
+  }
+
+  .item-container input[type="text"] {
+    width: 55%;
+  }
+
+  .footer {
+    grid-template-columns: 1fr 1fr 1fr;
+    height: auto;
+    gap: 40px 20px;
+  }
+}
+
+
+/* =========================
+   900px
+========================= */
+
+@media (max-width: 900px) {
+
+  .header {
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  main {
+    width: 90%;
+    padding-top: 180px;
+  }
+
+  .navBar {
+    position: static;
+    transform: none;
+
+    width: 95%;
+
+    margin: 20px auto 0;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+  }
+
+  .pages-container {
+    gap: 20px;
+  }
+
+  .bling-info-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  .item-container {
+    width: 100%;
+  }
+
+  .item-container input[type="text"] {
+    width: 60%;
+  }
+
+  .footer {
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+  }
+}
+
+
+/* =========================
+   800px
+========================= */
+
+@media (max-width: 800px) {
+
+  .header-top {
+    display: none;
+  }
+
+  main {
+    padding-top: 150px;
+  }
+}
+
+
+/* =========================
+   600px
+========================= */
+
+@media (max-width: 600px) {
+
+  .navBar {
+    flex-direction: column;
+    align-items: stretch;
+
+    border: none;
+  }
+
+  .navBar h1 {
+    text-align: center;
+  }
+
+  .pages-container {
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .search-container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .search-container > div {
+    width: 100%;
+  }
+
+  .search-container div input {
+    width: 100%;
+  }
+
+
+  /* =====================
+     Billing
+  ===================== */
+
+  .billing-details-section {
+    margin: 30px 0;
+  }
+
+  .billing-details-section h1 {
+    font-size: 28px;
+  }
+
+  .bling-info-container {
+    gap: 40px;
+  }
+
+  .form-container {
+    width: 100%;
+    gap: 25px;
+  }
+
+  .form-container input {
+    width: 100%;
+    height: 45px;
+  }
+
+  .item-container {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .item-container input[type="text"] {
+    width: 55%;
+  }
+
+  .item-container button {
+    width: 40%;
+  }
+
+
+  /* Footer */
+
+  .footer {
+    grid-template-columns: 1fr;
+    height: auto;
+
+    gap: 30px;
+
+    text-align: center;
+  }
+
+  .exclusive-footer,
+  .support-footer,
+  .account-footer div,
+  .quick-link-footer div,
+  .dawnload-footer {
+    align-items: center;
+  }
+}

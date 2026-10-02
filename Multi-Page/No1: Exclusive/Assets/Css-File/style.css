@@ -748,6 +748,22 @@ footer {
   gap: 20px;
 }
 
+.btn{
+  background-color: #db4444;
+  width: 180px;
+  height: 50px;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.btn:hover{
+  box-shadow: 5px 5px 3px #db4444;
+  width: 300px;
+}
+
 .jbl-info {
   display: flex;
 }

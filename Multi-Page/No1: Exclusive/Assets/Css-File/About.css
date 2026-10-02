@@ -59,7 +59,7 @@
   font-weight: bolder;
 }
 
-.pages-container > a:first-child {
+.pages-container > a:nth-child(3) {
   border-bottom: 3px solid black;
 }
 
@@ -119,7 +119,6 @@ main {
 }
 
 .price-cart {
-
   width: 23%;
   height: 17rem;
   display: flex;
@@ -189,13 +188,11 @@ main {
   font-size: 20px;
 }
 
-.person-cart{
+.person-cart {
   width: 24%;
-
-
 }
 
-.person-cart img{
+.person-cart img {
   width: 100%;
   height: 100%;
 }
@@ -227,7 +224,15 @@ main {
   align-items: center;
 }
 
+.pages{
+  text-align: start;
+  width: 100%;
+}
 
+.pages a{
+  text-decoration: none;
+  color: #000;
+}
 
 .exclusive-footer,
 .support-footer,
@@ -271,4 +276,317 @@ main {
   gap: 10px;
   text-align: center;
   margin-top: 80px;
+}
+
+@media (max-width: 1370px) {
+  main {
+    width: 90%;
+  }
+
+  .navBar {
+    width: 95%;
+  }
+
+  .pages-container {
+    gap: 40px;
+  }
+
+  .our-story-section {
+    gap: 40px;
+  }
+
+  .info {
+    width: 50%;
+  }
+
+  .image-box {
+    width: 50%;
+  }
+
+  .image-box img {
+    width: 100%;
+  }
+
+  .price {
+    gap: 20px;
+  }
+
+  .person-container {
+    gap: 20px;
+  }
+
+  .footer {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+
+@media (max-width: 1100px) {
+  .pages-container {
+    gap: 30px;
+  }
+
+  .search-container div input {
+    width: 150px;
+  }
+
+  .our-story-section {
+    gap: 30px;
+  }
+
+  .info {
+    width: 50%;
+  }
+
+  .info h1 {
+    font-size: 42px;
+  }
+
+  .info p {
+    font-size: 17px;
+  }
+
+  .image-box {
+    width: 50%;
+  }
+
+  .price {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .price-cart {
+    width: 100%;
+  }
+
+  .person-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 30px;
+  }
+
+  .person-cart {
+    width: 100%;
+  }
+
+  .footer {
+    grid-template-columns: 1fr 1fr 1fr;
+    height: auto;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .header {
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  main {
+    width: 90%;
+    padding-top: 180px;
+    gap: 70px;
+  }
+
+  .navBar {
+    position: static;
+    transform: none;
+    width: 95%;
+    margin: 20px auto 0;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .pages-container {
+    gap: 25px;
+  }
+
+
+  .our-story-section {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .info {
+    width: 100%;
+  }
+
+  .info h1 {
+    font-size: 40px;
+  }
+
+  .image-box {
+    width: 100%;
+  }
+
+  .image-box img {
+    width: 100%;
+  }
+
+
+  .price {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .price-cart {
+    width: 100%;
+  }
+
+
+  .person-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 25px;
+  }
+
+  .person-cart {
+    width: 100%;
+  }
+
+  .person-container h3 {
+    font-size: 26px;
+  }
+
+
+  .icon {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .footer {
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .header-top {
+    display: none;
+  }
+
+  main {
+    padding-top: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navBar {
+    flex-direction: column;
+    align-items: stretch;
+    border: none;
+  }
+
+  .navBar h1 {
+    text-align: center;
+  }
+
+  .pages-container {
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .search-container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .search-container > div {
+    width: 100%;
+  }
+
+  .search-container div input {
+    width: 100%;
+  }
+
+
+
+  main {
+    width: 90%;
+    gap: 60px;
+  }
+
+
+  .our-story-section {
+    gap: 30px;
+  }
+
+  .info {
+    width: 100%;
+    gap: 25px;
+  }
+
+  .info h1 {
+    font-size: 32px;
+  }
+
+  .info p {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .image-box {
+    width: 100%;
+  }
+
+  .image-box img {
+    width: 100%;
+  }
+
+  .price {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .price-cart {
+    width: 100%;
+    height: 220px;
+  }
+
+  .person-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .person-cart {
+    width: 100%;
+  }
+
+  .person-container h3 {
+    font-size: 26px;
+  }
+
+  .person-info {
+    gap: 10px;
+  }
+
+
+  .icon {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .icon > div {
+    width: 100%;
+  }
+
+
+  .footer {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .exclusive-footer,
+  .support-footer,
+  .account-footer div,
+  .quick-link-footer div,
+  .dawnload-footer {
+    align-items: center;
+  }
 }
