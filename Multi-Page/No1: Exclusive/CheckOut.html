@@ -4,13 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="Assets/Css-File/cart.css" />
-    <link
-      rel="stylesheet"
-      href="Assets/fontawesome-free-7.2.0-web/css/all.min.css"
-    />
+    <link rel="stylesheet" href="Assets/Css-File/CheckOut.css" />
   </head>
   <body>
+    <!-- Header Section HTML Code Start -->
     <header class="header">
       <div class="header-top">
         <div></div>
@@ -31,7 +28,7 @@
           <h1>Exclusive</h1>
         </div>
         <div class="pages-container">
-          <a href="index.html">Home</a>
+          <a href="#">Home</a>
           <a href="#">Contact</a>
           <a href="#">About</a>
           <a href="sign-up.html">Sign up</a>
@@ -55,64 +52,114 @@
         </div>
       </nav>
     </header>
+    <!-- Header Section HTML Code End -->
 
     <main>
       <section class="page">
-        <p><a href="index.html">Home</a> / <a href="cart.html">Cart</a></p>
+        <p>
+          <a href="index.html">Account</a> /
+          <a href="cart.html">My Account</a> / <a href="#">Product</a> /
+          <a href="cart.html">Viow Cart</a> /
+          <a href="CheckOut.html">CheckOut</a>
+        </p>
       </section>
 
-      <section class="buy-container">
-        <table>
-          <tr>
-            <td>Product</td>
-            <td>Price</td>
-            <td>Quantity</td>
-            <td>Subtotal</td>
-          </tr>
+      <section class="billing-details-section">
+        <h1>Billing Details</h1>
+        <div class="bling-info-container">
+          <div class="form-container">
+            <div>
+              <label for="#">First Name*</label>
+              <br />
+              <input type="text" />
+            </div>
 
-          <tr>
-            <td>
-              <span><img src="Assets/Image/Monitor.svg" alt="m" /></span>LCD
-              Monitor
-            </td>
-            <td>$650</td>
-            <td><input type="number" /></td>
-            <td>$650</td>
-          </tr>
-          <tr>
-            <td>
-              <span><img src="Assets/Image/gg.svg" alt="m" /></span>H1 Gamepad
-            </td>
-            <td>$550</td>
-            <td><input type="number" /></td>
-            <td>$1100</td>
-          </tr>
+            <div>
+              <label for="#">Company Name*</label>
+              <br />
+              <input type="text" />
+            </div>
 
-          <tr>
-            <td><button>Return To Shop</button></td>
-            <td></td>
-            <td></td>
-            <td><button>Update Cart</button></td>
-          </tr>
-        </table>
-      </section>
+            <div>
+              <label for="#">Street Address*</label>
+              <br />
+              <input type="text" />
+            </div>
 
-      <section class="form">
-        <div>
-          <input type="text" placeholder="Coupon Code" />
-          <input type="submit" value="Apply Coupon" />
-        </div>
+            <div>
+              <label for="#">Apartment, floor, etc. (optional)</label>
+              <br />
+              <input type="text" />
+            </div>
 
-        <div>
-          <div>
-            <h3>Cart Total</h3>
-            <p><span>Subtotal:</span><span>$1750</span></p>
-            <hr>
-            <p><span>Shipping:</span><span>Free</span></p>
-            <hr>
-            <p><span>Total:</span><span>$1750</span></p>
+            <div>
+              <label for="#">Phone Number*</label>
+              <br />
+              <input type="text" />
+            </div>
+
+            <div>
+              <label for="#">Email Address*</label>
+              <br />
+              <input type="text" />
+            </div>
           </div>
-          <button><a href="CheckOut.html">Procees to checkout</a></button>
+
+          <div class="item-container">
+            <div>
+              <span><img src="Assets/Image/gg.svg" alt="gg" /> Gamepad</span>
+              <span>$650</span>
+            </div>
+
+            <div>
+              <span
+                ><img src="Assets/Image/Monitor.svg" alt="Monitor" />H1
+                Gamepad</span
+              >
+              <span>$1100</span>
+            </div>
+
+            <div>
+              <p>
+                <span>Subtotal:</span>
+                <span>$1750</span>
+              </p>
+            </div>
+
+            <p>
+              <span>Shipping:</span>
+              <span>Free</span>
+            </p>
+
+            <div>
+              <p>
+                <span>Total:</span>
+                <span>$1750</span>
+              </p>
+            </div>
+
+            <div>
+              <p>
+                <span><input type="radio" /> <label for="#">Bank</label></span>
+              </p>
+            </div>
+
+            <div>
+              <span>
+                <input type="radio" />
+                <label for="#">Cash on delivery</label>
+              </span>
+            </div>
+
+            <div>
+              <input type="text" />
+              <button>Apply Coupon</button>
+            </div>
+
+            <div>
+              <button>Place order</button>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -142,7 +189,7 @@
         <h3>Account</h3>
         <br />
         <div>
-          <a href="#">My Account</a>
+          <a href="Account.html">My Account</a>
           <span
             ><a href="login.html">Login</a> /
             <a href="sign-up.html">Register</a></span

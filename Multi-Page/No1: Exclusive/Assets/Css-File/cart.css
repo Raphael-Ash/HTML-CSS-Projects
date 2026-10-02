@@ -6,9 +6,9 @@
 
 main {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1250px;
   margin: auto;
-  padding-top: 150px;
+  padding-top: 250px;
 }
 
 .header {
@@ -102,6 +102,96 @@ main {
   color: #fff;
   border-radius: 50%;
 }
+
+.buy-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+td,
+tr {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 110px;
+}
+
+td img {
+  height: 50px;
+  padding-right: 10px;
+}
+
+input[type="number"]{
+  width: 100px;
+  height: 50px;
+  padding: 0 10px;
+}
+
+input[type="text"]{
+  width: 250px;
+  height: 50px;
+  padding: 0 10px;
+}
+
+input[type="submit"]{
+  width: 200px;
+  height: 50px;
+  padding: 0 10px;
+  margin-left: 10px;
+  background-color: #db4444;
+  color: #fff;
+  border: none;
+}
+
+td button{
+  width: 200px;
+  height: 50px;
+  background-color: #fff;
+}
+
+
+table tr > td:last-child{
+  justify-content: flex-end;
+  padding-left: 10px;
+}
+
+.form{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form > div:last-child{
+  width: 450px;
+  height: 250px;
+  padding: 20px;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+.form > div h3{
+  text-align: start;
+}
+
+.form div p{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+.form button{
+  margin: auto;
+  border: none;
+  height: 50px;
+  width: 80%;
+  background-color: #db4444;
+  color: #fff;
+}
+
 
 .exclusive-footer,
 .support-footer,

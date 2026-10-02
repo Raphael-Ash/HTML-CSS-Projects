@@ -4,13 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./Assets/Css-File/sign-up.css" />
-    <link
-      rel="stylesheet"
-      href="Assets/fontawesome-free-7.2.0-web/css/all.min.css"
-    />
+    <link rel="stylesheet" href="Assets/Css-File/Account.css" />
   </head>
   <body>
+    <!-- Header Section HTML Code Start -->
     <header class="header">
       <div class="header-top">
         <div></div>
@@ -55,34 +52,78 @@
         </div>
       </nav>
     </header>
+    <!-- Header Section HTML Code End -->
 
     <main>
-      <section class="create-account-container">
-        <div class="img">
-          <img src="Assets/Image/Side Image.png" alt="mobile" />
-        </div>
-        <div class="info">
-          <h1>Create an account</h1>
-          <p>Enter your details below</p>
-          <div class="form">
-            <form action="#">
-              <input type="text" placeholder="Name" />
+      <section class="pages">
+        <p>
+          <a href="index.html">Home</a> /
+          <a href="Account.html">My Account</a>
+        </p>
+      </section>
 
-              <input type="text" placeholder="Email or phone number" />
-              <input type="text" placeholder="Password" />
-              <div>
-                <button class="sub" type="submit">Create account</button>
-                <button class="google">
-                  <img src="Assets/Image/Icon-Google.png" alt="" /><span
-                    >Sign up with Google</span
-                  >
-                </button>
-              </div>
-              <p>Already have account? <a href="login.html">Log in</a></p>
-            </form>
+     <section class="main">
+         <section class="manage-my-account-section">
+        <div class="manage">
+          <ol>
+            <li><h3>Manage My Account</h3></li>
+            <ol>
+              <li>My Profile</li>
+              <li>Address Book</li>
+              <li>My Payment Options</li>
+            </ol>
+            <li><h3>My Orders</h3></li>
+            <ol>
+              <li>My Returns</li>
+              <li>My Cancellations</li>
+            </ol>
+            <li><h3>My WishList</h3></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="edit-your-profile-section">
+        <h2>Edit Your Profile</h2>
+        <div class="form-container">
+          <div class="box1">
+            <div class="box1-input">
+              <span>
+                <label for="#">First Name</label>
+                <input type="text" placeholder="md" />
+              </span>
+
+              <span>
+                <label for="#">Last Name</label>
+                <input type="text" placeholder="Rimal" />
+              </span>
+            </div>
+
+            <div class="box1-input">
+              <span>
+                <label for="#">Address</label>
+                <input type="text" placeholder="Kingston, 5236, United State" />
+              </span>
+
+              <span>
+                <label for="#">Last Name</label>
+                <input type="text" placeholder="Rimal" />
+              </span>
+            </div>
+          </div>
+
+          <div class="box2">
+            <label>Password Changes</label>
+            <input type="text" placeholder="Current Passwod" />
+            <input type="text" placeholder="New Passwod" />
+            <input type="text" placeholder="Confirm New Passwod" />
+            <div class="btn-box">
+              <button>Cancel</button>
+              <button>Save Changes</button>
+            </div>
           </div>
         </div>
       </section>
+     </section>
     </main>
 
     <!-- Footer Section HTML Code Start -->
@@ -111,7 +152,10 @@
         <br />
         <div>
           <a href="#">My Account</a>
-          <span><a href="login.html">Login</a> / <a href="sign-up.html">Register</a></span>
+          <span
+            ><a href="login.html">Login</a> /
+            <a href="sign-up.html">Register</a></span
+          >
           <a href="cart.html">Cart</a>
           <a href="wishlist.html">Wishlist</a>
           <a href="#">Shop</a>
